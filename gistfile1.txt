@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>W3.CSS Template</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    body {font-family: "Lato", sans-serif}
+    .mySlides {display: none}
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+    <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ABOUT</a>
+    <a href="/logout" class="w3-bar-item w3-button w3-padding-large w3-hide-small">LOGOUT</a>
+  </div>
+</div>
+
+<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+  <a href="#band" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">About</a>
+</div>
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:2000px;margin-top:46px">
+
+  <!-- Logged out section -->
+  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="loggedout">
+    <h2 class="w3-wide">ECHORAND CORP IMAGE HOST</h2>
+    <form action="/login/github" method="get">
+      <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top" type="submit">
+        Login using GitHub
+      </button>
+    </form>
+  </div>
+
+  <!-- Logged in section -->
+  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="loggedin">
+    <h2 class="w3-wide">YOUR IMAGES</h2>
+    <div class="w3-row w3-padding-32" id="uploadedImages">
+      <div class="w3-third">
+        <p>Name</p>
+        <img src="/w3images/bandmember.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:60%">
+      </div>
+      <div class="w3-third">
+        <p>Name</p>
+        <img src="/w3images/bandmember.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:60%">
+      </div>
+      <div class="w3-third">
+        <p>Name</p>
+        <img src="/w3images/bandmember.jpg" class="w3-round" alt="Random Name" style="width:60%">
+      </div>
+      </div>
+
+      <div class="w3-row w3-padding-32">
+      <div class="w3-third">
+        <p>Name</p>
+        <img src="/w3images/bandmember.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:60%">
+      </div>
+      <div class="w3-third">
+        <p>Name</p>
+        <img src="/w3images/bandmember.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="width:60%">
+      </div>
+      <div class="w3-third">
+        <p>Name</p>
+        <img src="/w3images/bandmember.jpg" class="w3-round" alt="Random Name" style="width:60%">
+      </div>
+    </div>
+
+    <h2 class="w3-wide">UPLOAD A NEW IMAGE</h2>
+    <div class="w3-row w3-padding-32">
+      <form id='form' hx-encoding='multipart/form-data' hx-post='/upload' hx-swap="uploadedImages">
+        <input class="w3-input" type='file' name='file'>
+        <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">
+          https://github.com/bigskysoftware/htmx/issues/494
+          Upload
+        </button>
+      </form>
+    </div>
+
+  <!-- The About Section -->
+  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="about">
+    <h2 class="w3-wide">ABOUT</h2>
+    <p class="w3-opacity"><i>Host your images privately</i></p>
+    <p class="w3-justify">Echorand Corp's image hosting appliction. Your images are now in your control. 10 GB free storage.</p>
+  </div>
+
+
+
+  <!-- End Page Content -->
+</div>
+
+<!-- Image of location/map -->
+<img src="/w3images/map.jpg" class="w3-image w3-greyscale-min" style="width:100%">
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+  <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+</footer>
+
+</body>
+</html>
