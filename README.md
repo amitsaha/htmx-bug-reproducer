@@ -1,3 +1,7 @@
+# Potential Bug Reproducer
+
+Issue: https://github.com/bigskysoftware/htmx/issues/1561
+
 ```
 $ python3 -m http.server
 ```
